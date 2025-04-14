@@ -1,2 +1,2 @@
-# Golisopedia
-Golisopedia - RU version of Bulbapedia. WIP.
+# Russia-My-History
+Yeah

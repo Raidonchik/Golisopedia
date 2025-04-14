@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css.css">
+    <title>Golisopedia</title>
+    <!-- вставляем сгенерированную иконку для сайта из https://www.favicon-generator.org/ -->
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- ***** -->
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><img src="img/logo (1).png" width="120" height="120" alt="a lover of books"></div>
+        <nav class="main-menu"><ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a>HP калькулятор</a></li>
+          <li><a href="https://play.pokemonshowdown.com/">Pokemon Showdown</a></li>
+          <p></p>
+          <li><a href="https://www.smogon.com/">Smogon</a></li>
+        </ul>
+        </nav>
+      </header>
+    <div class="calculator">
+        <h1>Калькулятор скрытой силы</h1>
+        <div class="inputs">
+            <label for="hp">ОЗ:</label>
+            <input type="number" id="hp" min="0" max="31" placeholder="IV" oninput="calculateHiddenPower()">
+            <label for="atk">Атк:</label>
+            <input type="number" id="atk" min="0" max="31" placeholder="IV" oninput="calculateHiddenPower()">
+            <label for="def">Деф:</label>
+            <input type="number" id="def" min="0" max="31" placeholder="IV" oninput="calculateHiddenPower()">
+        </div>
+        <div class="inputs">
+            <label for="spd">Спе:</label>
+            <input type="number" id="spd" min="0" max="31" placeholder="IV" oninput="calculateHiddenPower()">
+            <label for="spa">Спа:</label>
+            <input type="number" id="spa" min="0" max="31" placeholder="IV" oninput="calculateHiddenPower()">
+            <label for="spd">Спд:</label>
+            <input type="number" id="spd" min="0" max="31" placeholder="IV" oninput="calculateHiddenPower()">
+        </div>
+        <div class="results">
+            <p id="hp-result">Тип скрытой силы: Нормальный</p>
+            <img id="hp-image" src="img/NormalType.png" alt="Hidden Power Type" />
+        </div>
+    </div>
+
+    <div class="table-container">
+        <div style="text-align: left; margin-bottom: 5px;">
+            <strong>Самые высокие IVS по типам:</strong>
+        </div>        
+        <table>
+            <thead>
+                <tr>
+                    <th>Тип</th>
+                    <th>ОЗ</th>
+                    <th>Атк</th>
+                    <th>Деф</th>
+                    <th>Спа</th>
+                    <th>Спд</th>
+                    <th>Спе</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img class="type-icon" src="img/BugType.png" alt="Bug"></td>
+                    <td>31</td><td>31</td><td>31</td><td>31</td><td>30</td><td>30</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/DarkType.png" alt="Dark"></td>
+                    <td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/DragonType.png" alt="Dragon"></td>
+                    <td>30</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/ElectricType.png" alt="Electric"></td>
+                    <td>31</td><td>31</td><td>31</td><td>30</td><td>31</td><td>31</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/FightingType.png" alt="Fighting"></td>
+                    <td>31</td><td>31</td><td>30</td><td>30</td><td>30</td><td>30</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/FireType.png" alt="Fire"></td>
+                    <td>31</td><td>30</td><td>31</td><td>30</td><td>31</td><td>30</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/FlyingType.png" alt="Flying"></td>
+                    <td>31</td><td>31</td><td>31</td><td>30</td><td>30</td><td>30</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/GhostType.png" alt="Ghost"></td>
+                    <td>31</td><td>30</td><td>31</td><td>31</td><td>30</td><td>31</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/GrassType.png" alt="Grass"></td>
+                    <td>30</td><td>31</td><td>31</td><td>30</td><td>31</td><td>31</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/GroundType.png" alt="Ground"></td>
+                    <td>31</td><td>31</td><td>31</td><td>30</td><td>30</td><td>31</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/IceType.png" alt="Ice"></td>
+                    <td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>30</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/PoisonType.png" alt="Poison"></td>
+                    <td>31</td><td>31</td><td>30</td><td>30</td><td>30</td><td>31</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/PsychicType.png" alt="Psychic"></td>
+                    <td>30</td><td>31</td><td>31</td><td>31</td><td>31</td><td>30</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/RockType.png" alt="Rock"></td>
+                    <td>31</td><td>31</td><td>30</td><td>31</td><td>30</td><td>30</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/SteelType.png" alt="Steel"></td>
+                    <td>31</td><td>31</td><td>31</td><td>31</td><td>30</td><td>31</td>
+                </tr>
+                <tr>
+                    <td><img class="type-icon" src="img/WaterType.png" alt="Water"></td>
+                    <td>31</td><td>31</td><td>31</td><td>30</td><td>31</td><td>30</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const typeImages = [
+            "img/FightingType.png",
+            "img/FlyingType.png",
+            "img/PoisonType.png",
+            "img/GroundType.png",
+            "img/RockType.png",
+            "img/BugType.png",
+            "img/GhostType.png",
+            "img/SteelType.png",
+            "img/FireType.png",
+            "img/WaterType.png",
+            "img/GrassType.png",
+            "img/ElectricType.png",
+            "img/PsychicType.png",
+            "img/IceType.png",
+            "img/DragonType.png",
+            "img/DarkType.png"
+        ];
+
+        function calculateHiddenPower() {
+            const hp = parseInt(document.getElementById("hp").value) || 0;
+            const atk = parseInt(document.getElementById("atk").value) || 0;
+            const def = parseInt(document.getElementById("def").value) || 0;
+            const spd = parseInt(document.getElementById("spd").value) || 0;
+            const spa = parseInt(document.getElementById("spa").value) || 0;
+            const spdDef = parseInt(document.getElementById("spd").value) || 0;
+
+            const a = hp % 2;
+            const b = atk % 2;
+            const c = def % 2;
+            const d = spd % 2;
+            const e = spa % 2;
+            const f = spdDef % 2;
+
+            const typeIndex = Math.floor(((a + 2 * b + 4 * c + 8 * d + 16 * e + 32 * f) * 15) / 63);
+            const typeImage = typeIndex >= 0 ? typeImages[typeIndex] : "img/NormalType.png";
+            const typeName = typeIndex >= 0 
+                ? typeImage.split("/").pop().replace("Type.png", "") 
+                : "Normal";
+
+            document.getElementById("hp-result").textContent = `Тип скрытой силы: ${typeName}`;
+            document.getElementById("hp-image").src = typeImage;
+        }
+    </script>
+</body>
+<script src="js/Menu.js"></script>
+<footer>Made by Pokefans Community</footer>
+</html>
